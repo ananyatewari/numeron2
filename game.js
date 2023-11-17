@@ -64,7 +64,7 @@ plus.addEventListener ("click", () => {
         randomise();
     } 
     else {
-        window.location.href = "./gameover.html";
+        window.location.href = "./gameover.html?score=" + score;
     }
 });
 minus.addEventListener ("click", () => {
@@ -75,7 +75,7 @@ minus.addEventListener ("click", () => {
         randomise();
     } 
     else {
-        window.location.href = "./gameover.html";
+        window.location.href = "./gameover.html?score=" + score;
     }
 });
 multiply.addEventListener ("click", () => {
@@ -86,7 +86,7 @@ multiply.addEventListener ("click", () => {
         randomise();
     } 
     else {
-        window.location.href = "./gameover.html";
+        window.location.href = "./gameover.html?score=" + score;
     }
 });
 divide.addEventListener ("click", () => {
@@ -97,7 +97,7 @@ divide.addEventListener ("click", () => {
         randomise();
     } 
     else {
-        window.location.href = "./gameover.html";
+        window.location.href = "./gameover.html?score=" + score;
     }
 });
 modulus.addEventListener ("click", () => {
@@ -108,16 +108,16 @@ modulus.addEventListener ("click", () => {
         randomise();
     } 
     else {
-        window.location.href = "./gameover.html";
+        window.location.href = "./gameover.html?score=" + score;
     }
 });
 // Iteration 7: Making Timer functional
 var timer = document.getElementById("timer");
-var time = 5;
+var time = 20;
 var timing;
 
 function timerStarting(){
-    time = 5;
+    time = 20;
     timer.innerHTML = time;
     timing = setInterval(function(){
         time--;
@@ -126,7 +126,7 @@ function timerStarting(){
 
     }, 1000);
 
-    localStorage.setItem("score", score);
+    // localStorage.setItem("score", score);
 }
 
 function resetTiming(timertrack){

@@ -1,8 +1,9 @@
 // Iteration 8: Making scoreboard functional
 var finalScore = document.getElementById("score-board");
 const playAgain = document.getElementById("play-again-button");
-
-var score = localStorage.getItem("score");
+// var score = localStorage.getItem("score");
+var urlThing = new URLSearchParams(window.location.search);
+var score = urlThing.get("score");
 
 finalScore.innerHTML = score;
 
